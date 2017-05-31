@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PGH-JE-ZTI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Timer View Controller-->
+        <scene sceneID="HPt-n1-LvY">
+            <objects>
+                <viewController storyboardIdentifier="TimerViewController" id="PGH-JE-ZTI" customClass="TimerViewController" customModule="Project4_CircularTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lve-nx-kMw"/>
+                        <viewControllerLayoutGuide type="bottom" id="4wo-gl-XJr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VXd-so-U9a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24v-sw-npg" customClass="CircleView" customModule="Project4_CircularTimer" customModuleProvider="target">
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 : 30 : 30 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e81-vx-cqB">
+                                        <rect key="frame" x="45.5" y="60" width="160" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="ALD-st-Ifq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnI-0t-SQA">
+                                        <rect key="frame" x="80.5" y="140" width="90" height="40"/>
+                                        <color key="backgroundColor" red="0.36924913194444442" green="0.75821940104166663" blue="0.3411764706" alpha="0.62128103595890416" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="NZL-D6-tcg"/>
+                                            <constraint firstAttribute="width" constant="90" id="kpe-od-s1Q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="START">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startTimer:" destination="PGH-JE-ZTI" eventType="touchUpInside" id="njl-0H-4Ww"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="rnI-0t-SQA" firstAttribute="top" secondItem="e81-vx-cqB" secondAttribute="bottom" constant="20" id="Nlf-zT-L6R"/>
+                                    <constraint firstAttribute="width" constant="250" id="dUe-F1-Uo2"/>
+                                    <constraint firstItem="e81-vx-cqB" firstAttribute="centerX" secondItem="24v-sw-npg" secondAttribute="centerX" id="hCt-wd-kHf"/>
+                                    <constraint firstItem="e81-vx-cqB" firstAttribute="top" secondItem="24v-sw-npg" secondAttribute="top" constant="60" id="hML-oe-YGH"/>
+                                    <constraint firstItem="rnI-0t-SQA" firstAttribute="centerX" secondItem="24v-sw-npg" secondAttribute="centerX" id="nUH-nB-XWP"/>
+                                    <constraint firstAttribute="height" constant="250" id="qvZ-yR-gfK"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Sec Timer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsR-T9-w7H">
+                                <rect key="frame" x="46" y="150.5" width="283" height="20.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmz-E5-PIf">
+                                <rect key="frame" x="335" y="30" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="QT2-BK-o9l"/>
+                                    <constraint firstAttribute="height" constant="30" id="jeG-UC-CIo"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeBtnTapped:" destination="PGH-JE-ZTI" eventType="touchUpInside" id="M02-uW-x5D"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Need to update time with timer and stop functionality." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1N-Jx-6kw">
+                                <rect key="frame" x="46" y="606" width="283" height="41"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="24v-sw-npg" firstAttribute="centerX" secondItem="VXd-so-U9a" secondAttribute="centerX" id="0aE-Lj-y3Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BsR-T9-w7H" secondAttribute="trailing" constant="30" id="1Pm-8h-OBE"/>
+                            <constraint firstItem="4wo-gl-XJr" firstAttribute="top" secondItem="g1N-Jx-6kw" secondAttribute="bottom" constant="20" id="1QZ-SA-1Os"/>
+                            <constraint firstItem="24v-sw-npg" firstAttribute="centerY" secondItem="VXd-so-U9a" secondAttribute="centerY" id="8m7-hW-gqa"/>
+                            <constraint firstItem="BsR-T9-w7H" firstAttribute="centerX" secondItem="VXd-so-U9a" secondAttribute="centerX" id="ME5-eA-UYR"/>
+                            <constraint firstItem="g1N-Jx-6kw" firstAttribute="leading" secondItem="VXd-so-U9a" secondAttribute="leadingMargin" constant="30" id="WbU-AF-ZHR"/>
+                            <constraint firstItem="BsR-T9-w7H" firstAttribute="leading" secondItem="VXd-so-U9a" secondAttribute="leadingMargin" constant="30" id="dGo-y2-SoI"/>
+                            <constraint firstAttribute="trailing" secondItem="jmz-E5-PIf" secondAttribute="trailing" constant="10" id="gjd-TS-yxL"/>
+                            <constraint firstItem="24v-sw-npg" firstAttribute="top" secondItem="BsR-T9-w7H" secondAttribute="bottom" constant="37.666666666666657" id="gvR-Lx-KLr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g1N-Jx-6kw" secondAttribute="trailing" constant="30" id="jUb-bZ-VS5"/>
+                            <constraint firstItem="jmz-E5-PIf" firstAttribute="top" secondItem="lve-nx-kMw" secondAttribute="bottom" constant="10" id="q8x-FJ-z03"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="exerciseTitle" destination="BsR-T9-w7H" id="ycv-be-tR4"/>
+                        <outlet property="timerView" destination="24v-sw-npg" id="AJD-we-lsr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xid-9Y-fbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4351.1999999999998" y="-319.79010494752629"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="16" height="16"/>
+    </resources>
+</document>
